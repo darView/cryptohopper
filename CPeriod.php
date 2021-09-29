@@ -16,11 +16,11 @@ class CPeriod
     const PERIOD_1D = '1d';
 
     /**
-     * @param $period
+     * @param string $period
      * @return int
      * @throws Exception
      */
-    public static function getPeriodInSeconds($period)
+    public static function getPeriodInSeconds(string $period)
     {
         switch ($period) {
             case self::PERIOD_1M:

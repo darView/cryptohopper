@@ -14,5 +14,5 @@ interface IExchange
      * @param string $period
      * @return array
      */
-    function getData($start_unix_ts, $end_unix_ts, $period): array;
+    function getData(int $start_unix_ts, int $end_unix_ts, string $period): array;
 }

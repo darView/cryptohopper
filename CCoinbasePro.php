@@ -11,9 +11,9 @@ class CCoinbasePro implements IExchange
 
     /**
      * CCoinbasePro constructor.
-     * @param $market
+     * @param string $market
      */
-    public function __construct($market)
+    public function __construct(string $market)
     {
         $this->setMarket($market);
     }
@@ -24,7 +24,7 @@ class CCoinbasePro implements IExchange
      * @param string $period
      * @return array
      */
-    public function getData($start_unix_ts, $end_unix_ts, $period): array
+    public function getData(int $start_unix_ts, int $end_unix_ts, string $period): array
     {
         $chart = $this->getChart($start_unix_ts, $end_unix_ts, $period);
 
@@ -38,12 +38,12 @@ class CCoinbasePro implements IExchange
     }
 
     /**
-     * @param $start_unix_ts
-     * @param $end_unix_ts
-     * @param $period
+     * @param int $start_unix_ts
+     * @param int $end_unix_ts
+     * @param string $period
      * @return array
      */
-    protected function getChart($start_unix_ts, $end_unix_ts, $period): array
+    protected function getChart(int $start_unix_ts, int $end_unix_ts, string $period): array
     {
         $headers[] = 'Content-Type: application/json';
 
