@@ -1,0 +1,9 @@
+In a terminal run:
+$ docker run -d -p 80:80 --name cryptohopper_guido -v "$PWD":/var/www/html php:7.4-apache
+
+In a web-browser goto url:
+http://localhost/?exchange=coinbasepro&market=btc-eur&period=5m
+
+Notes:
+- Currently only one exchange is implemented (coinbasepro).
+- Available periods are: 1m, 5m, 15m, 30m, 1h, 2h, 4h and 1d.
