@@ -49,10 +49,6 @@ function main(string $exchange, string $market, string $period)
             header('HTTP/1.1 500 Internal Server Error');
             break;
     }
-    if (array_key_exists('error', $result)) {
-
-    } else {
-    }
     echo json_encode($result);
 }
 
